@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+    --cor_botao: #135dac;
+    --cor_da_fonte: #f8f8ff;
+    --cor_progresso: #038c33;
+    --borda: 1px solid black;
+    --cor_botao_hover: #0c3c6e;
+    --cor_fundo_da_pagina: #f8f8ff;
+    --cor_fundo_progresso: #bcbcbc28;
+    --sombra: 2px 3px 6px 0px #00000025;
+    --fonte_principal: 'Cabin', sans-serif;
+}
+
+/* Mobile */
+body {
+    background-color: var(--cor_fundo_da_pagina);
+}
+
+.div_cabecalho {
+    gap: 30%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.texto_titulo {
+    font-weight: 500;
+    font-size: 1.2em;
+    font-family: var(--fonte_principal);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.212);
+}
+
+.img_desligar {
+    width: 10%;
+}
+
+.img_desligar:hover {
+    border-radius: 70%;
+    background-color: rgba(255, 0, 0, 0.425);
+}
+
+.div_tabela {
+    width: 85%;
+    height: 60vh;
+    overflow: auto;
+    margin: 0 auto;
+    border: var(--borda);
+    background-color: white;
+    box-shadow: var(--sombra);
+    font-family: var(--fonte_principal);
+}
+
+.div_tabela table {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.div_tabela th {
+    padding: 5px;
+    font-size: 1em;
+    text-align: center;
+    font-weight: bolder;
+    border: var(--borda);
+    align-content: center;
+   
+}
+
+.div_tabela th:nth-child(odd) {
+    background-color: #eaeaeb;
+}
+
+.div_tabela td:nth-child(odd) {
+    background-color: #eaeaeb;
+}
+
+.div_tabela td {
+    padding: 1px;
+    font-size: .7em;
+    border: var(--borda);
+    align-content: center;
+}
+
+.input_form_carregar {
+    display: none;
+}
+
+.form_carregar,
+.form_salvar {
+    gap: 2vw;
+    display: flex;
+    margin-top: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_carregar,
+.container_salvar {
+    width: 50%;
+    height: 4.5vh;
+    border-radius: 10px;
+    border: var(--borda);
+    box-shadow: var(--sombra);
+    background-color: var(--cor_fundo_progresso);
+}
+
+.botao_carregar,
+.botao_salvar {
+    width: 29%;
+    height: 5vh;
+    font-size: 1em;
+    font-weight: 550;
+    border-radius: 10px;
+    border: var(--borda);
+    box-shadow: var(--sombra);
+    color: var(--cor_da_fonte);
+    background-color: var(--cor_botao);
+    font-family: var(--fonte_principal);
+    text-shadow: 1px 1px 2px white(0, 0, 0, 0.212);
+}
+
+button:hover {
+    background-color: var(--cor_botao_hover);
+}
+
+.progresso_carregar,
+.progresso_salvar {
+    width: 0;
+    height: 100%;
+    border-radius: 9px;
+    transition: 0.6 ease;
+    box-sizing: border-box;
+    background-color: var(--cor_progresso);
+}
+
+.rodape {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.icone_pru {
+    width: 50vw;
+    margin: 20px 0;
+}
+
+/* Tablet */
+@media screen and (min-width: 834px) {
+    .div_cabecalho {
+        gap: 50%;
+    }
+
+    .texto_titulo {
+        font-size: 1.5em;
+    }
+    
+    .img_desligar {
+        width: 4.5%;
+    }
+    
+    .botao_carregar,
+    .botao_salvar {
+        width: 20%;
+        
+    }
+    
+    .icone_pru {
+        width: 30vw;
+    }
+}
+
+
+/* Notebook */
+@media screen and (min-width: 1025px){
+    .div_cabecalho {
+        gap: 70%;
+        padding: 10px;
+    }
+
+    .texto_titulo {
+        font-size: 1.1em;
+    }
+
+    .img_desligar {
+        width: 2.3%;
+    }
+
+    .div_tabela {
+        width: 90vw;
+        height: 58vh;
+    }
+
+    .form_carregar,
+    .form_salvar {
+        gap: 1vw;
+        margin-top: 15px;
+    }
+
+    .container_carregar,
+    .container_salvar {
+        height: 5vh;
+    }
+
+    .botao_carregar,
+    .botao_salvar {
+        width: 18%;
+        height: 5.9vh;
+        font-size: .9em;
+    }
+
+    .icone_pru {
+        width: 16vw;
+        margin: 5px 0;
+    }
+}
+
+
+/* Monitor Full HD */
+@media screen and (min-width: 1728px) {
+    .texto_titulo {
+        font-size: 1.3em;
+    }
+
+    .img_desligar {
+        width: 2.5%;
+    }
+
+    .div_tabela {
+        height: 63vh;
+    }
+
+    .container_carregar,
+    .container_salvar {
+        margin-top: 5px;
+    }
+
+    .botao_carregar,
+    .botao_salvar {
+        width: 15vw;
+        height: 5.5vh;
+    }
+
+    .icone_pru {
+        width: 15vw;
+        margin: 15px 0px;
+    }
+}

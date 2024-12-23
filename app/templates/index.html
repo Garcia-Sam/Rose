@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/icone_rose_resized.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+    <title>Rose</title>
+</head>
+<body>
+
+    <div class="div_cabecalho">
+        <h1 class="texto_titulo">Pré-visualização da tabela:</h1>
+
+        <img class="img_desligar" src="{{ url_for('static', filename='img/desligar.png') }}" alt="Ícone de Desligar o Servidor" onclick="desligarServidor()">
+    </div>
+
+    <div class="div_tabela">
+
+        {% if data %}
+            {{ data|safe }}
+        {% endif %}
+        
+    </div>
+    
+
+    <form class="form_carregar" method="post" enctype="multipart/form-data" onsubmit="iniciarProgressoCarregar(); return false;">
+
+        <input type="file" name="arquivo" class="input_form_carregar" accept=".xls, .xlsx" required> 
+
+        <button type="submit" class="botao_carregar" onsubmit="document.querySelector('.form_carregar').submit();">
+            Carregar Excel
+        </button>
+
+        <div class="container_carregar" role="progressbar">
+            <div class="progresso_carregar"></div>
+        </div>
+
+    </form>
+
+ 
+    <form class="form_salvar" method="post" action="/salvar_excel" onsubmit="iniciarProgressoSalvar(); return false;">
+
+        <button type="submit" class="botao_salvar">
+            Salvar Excel
+        </button>
+
+        <div class="container_salvar" role="progressbar">
+            <div class="progresso_salvar"></div>
+        </div>
+
+    </form>
+
+    <footer class="rodape">
+        <img class="icone_pru" src="{{ url_for('static', filename='img/logo_pru.png') }}" alt="Logo da PRU1">
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
