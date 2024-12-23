@@ -1,7 +1,7 @@
 ## ROSE
 
 <div align='center'>
-    <img src='https://github.com/user-attachments/assets/c84fde7d-68eb-4ace-ab6b-33fd53a6d9fd' alt='Ícone do Robô ROSE' width='200px' />
+    <img src='https://github.com/user-attachments/assets/c84fde7d-68eb-4ace-ab6b-33fd53a6d9fd' alt='Ícone do Robô ROSE' width='1500px' />
 </div>
 
 Esta aplicação Python processa arquivos Excel para organizar e estruturar dados de IDs. Ela oferece funcionalidades para filtrar, classificar e agrupar as colunas correlacionadas em fases, chamadas de MODELO. A aplicação identifica e separa automaticamente os IDs únicos dos duplicados em cada fase, permitindo um controle eficiente sobre dados repetidos e melhorando a integridade das informações.
